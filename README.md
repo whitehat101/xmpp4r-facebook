@@ -1,12 +1,19 @@
-# Xmpp4r::Facebook
+# XMPP4R Facebook SASL Mechanism
 
-TODO: Write a gem description
+Adds a X-Facebook-Platform SASL Authentication Mechanism to xmpp4r.
+This gems loads xmpp4r and the SASL XFacebookPlatform mechinism, nothing more.
+
+See the [xmpp4r project page](https://github.com/xmpp4r/xmpp4r) for information about xmpp4r.
+
+Credit to @ShogunPanda for the [initial PR](https://github.com/ln/xmpp4r/pull/25) that this gem is based.
+
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
     gem 'xmpp4r-facebook'
+    # listing xmpp4r in your gemfile is not necessary
 
 And then execute:
 
@@ -18,7 +25,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    client.auth_sasl(Jabber::SASL::XFacebookPlatform.new(client, {:id => APP_ID, :token => ACCESS_TOKEN}), nil)
 
 ## Contributing
 
